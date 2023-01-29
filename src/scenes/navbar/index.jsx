@@ -30,12 +30,12 @@ const Navbar = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const user = useSelector((state) => state.user)
-  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)")
+  const isNonMobileScreens = useMediaQuery("(min-width: 1050px)")
 
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light
   const dark = theme.palette.neutral.dark
-  const background = theme.palette.background.default
+  const background = theme.palette.background.alt
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
 
@@ -124,10 +124,9 @@ const Navbar = () => {
         <Box
           position="fixed"
           right="0"
-          bottom="0"
-          height="100%"
+          top="0"
+          height="48%"
           zIndex="10"
-          maxWidth="500px"
           minWidth="300px"
           backgroundColor={background}
         >
